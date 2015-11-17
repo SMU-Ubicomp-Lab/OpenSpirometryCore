@@ -522,7 +522,14 @@
         self.currentStage = SpirometryStageIsAnalyzingResults;
         
         // finalize and get the results
-        NSDictionary *results = [self.fvAnalyzer finalizeCurvesAndGetResults];
+        NSMutableDictionary *results = [[self.fvAnalyzer finalizeCurvesAndGetResults]mutableCopy];
+        
+        [results setObject:@"None" forKey:@"RecordedAudioFilenameForEffort"];
+        
+        // add in the filname if one exists for this file
+        if(self.audioManager.audioFileWrittenOut != nil){
+            [results setObject:[self.audioManager.audioFileWrittenOut copy] forKey:@"RecordedAudioFilenameForEffort"];
+        }
         
         // perform delegation for effort did finish
         if(delegateRespondsTo.didEndEffortWithResults){

@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Eric Larson. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+
 #ifndef OpenSpirometry_SpirometerConstants_h
 #define OpenSpirometry_SpirometerConstants_h
 
@@ -28,6 +30,15 @@
 #define NUM_SAMPLES_BACK_FROM_PEAKFLOW_TO_INTERPOLATE 30 // number of samples to start the search for breaking monotnic values from the whistle
 #define TEST_MAX_DURATION_SECONDS 10
 
+extern NSString *const SpiroEffort_FVCInLiters;
+extern NSString *const SpiroEffort_FlowCurveInLitersPerSecond;
+extern NSString *const SpiroEffort_PeakFlowInLitersPerSecond;
+extern NSString *const SpiroEffort_FEVOneInLiters;
+extern NSString *const SpiroEffort_TimeStampsForFlowAndVolume;
+extern NSString *const SpiroEffort_ErrorsDictionary;
+extern NSString *const SpiroEffort_RecordedAudioFilenameForEffort;
+extern NSString *const SpiroEffort_FEVOneOverFVC;
+extern NSString *const SpiroEffort_VolumeCurveInLiters;
 
 //define stages for our test
 typedef enum : NSUInteger {
