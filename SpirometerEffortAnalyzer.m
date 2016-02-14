@@ -324,7 +324,7 @@
     static CFTimeInterval testStartTime = 0;
     static CFTimeInterval silencedEndedStartTime = 0;
     
-    if( self.samplesRead < self.audioManager.samplingRate*2){
+    if( self.samplesRead < self.audioManager.samplingRate*MAX_CALIBRATION_TIME){
         // still collecting samples for silence
         //reset state
         testStarted = NO;
