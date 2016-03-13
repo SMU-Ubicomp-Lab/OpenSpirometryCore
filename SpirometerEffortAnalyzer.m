@@ -104,8 +104,7 @@
 //=============================================================================================================
 #pragma mark Init/Dealloc
 // set up as singleton class
-+ (SpirometerEffortAnalyzer *) spirometerAnalyzer
-{
++ (SpirometerEffortAnalyzer *)sharedInstance{
     static SpirometerEffortAnalyzer * _sharedInstance = nil;
     
     static dispatch_once_t oncePredicate;

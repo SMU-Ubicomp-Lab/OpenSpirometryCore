@@ -32,7 +32,7 @@
 @property (strong, nonatomic) SpirometryWhistle* whistle;
 @property (nonatomic) float prefferredAudioMaxUpdateIntervalInSeconds;
 
-
++ (SpirometerEffortAnalyzer *)sharedInstance;
 -(void)beginListeningForEffort;
 -(void)askPermissionToUseAudioIfNotDone;
 -(void)requestThatCurrentEffortShouldCancel;
