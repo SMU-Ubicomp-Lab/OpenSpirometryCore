@@ -209,9 +209,9 @@
     //    }
     
     // all blank for now, just so you get an idea of the structure of what is returned
-    return @{@"FlowCurveInLitersPerSecond":[[NSArray alloc] initWithArray:filteredFlow], // send back nonmutable copy
-             @"VolumeCurveInLiters":[[NSArray alloc] initWithArray:self.constantSampledVolumeInLiters], // send back nonmutable copy
-             @"TimeStampsForFlowAndVolume":[[NSArray alloc] initWithArray:self.constantSampledCumulativeTime], // send back nonmutable copy
+    return @{@"FlowCurveInLitersPerSecond": @[],//[[NSArray alloc] initWithArray:filteredFlow], // send back nonmutable copy
+             @"VolumeCurveInLiters":@[],//[[NSArray alloc] initWithArray:self.constantSampledVolumeInLiters], // send back nonmutable copy
+             @"TimeStampsForFlowAndVolume": @[],//[[NSArray alloc] initWithArray:self.constantSampledCumulativeTime], // send back nonmutable copy
              @"PeakFlowInLitersPerSecond":self.peakFlowInLitersPerSecond,
              @"FEVOneInLiters":self.fevOneInLiters,
              @"FVCInLiters":self.fvcInLiters,
