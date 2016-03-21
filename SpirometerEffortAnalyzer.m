@@ -553,7 +553,7 @@
             NSLog(@"Effort did end, Shutting Down Audio");
             [self.audioManager pause]; // stop
             [self.dataBuffer processRemainingBlocks]; // kill remainder of queue
-            
+            [self didFinishProcessingAllBuffers];
         }
         else if(self.currentStage == SpirometryStageDidTimeOutWaitingForEffort){
             self.isShuttingDown = YES; // this function should only be called from main queue so no semaphore needed
